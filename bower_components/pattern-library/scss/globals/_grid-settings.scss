@@ -1,0 +1,27 @@
+@import "../vendor/neat/neat-helpers";
+
+// Set up grid measurements (using desktop dimensions to
+// calculate, but they'll get made into percentages).
+$column: 59px;
+$gutter: 16px;
+
+// max width beyond which the grid shall not pass
+$max-width: 1200px;
+
+$grid-columns: 8; // mobile first, dude
+
+// Breakpoints:
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1080px;
+
+// Media contexts
+$tablet: new-breakpoint(min-width $tablet-breakpoint 16); // 16 columns
+$desktop: new-breakpoint(min-width $desktop-breakpoint 16); // 16 columns
+
+// Additional media queries
+$tall-mobile: min-device-height 960px;
+
+// Development
+// $visual-grid: true;
+$visual-grid-index: front;
+$visual-grid-color: #fcc;

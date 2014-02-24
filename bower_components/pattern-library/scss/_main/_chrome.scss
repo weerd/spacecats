@@ -1,0 +1,458 @@
+// Logo & primary navigation/dropdowns
+.nav--wrapper {
+  // we place the nav above the content so that it can
+  // be layered on top of headers, etc
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: $max-width;
+
+  .main {
+    @include media($tablet) {
+      @include outer-container-margin;
+      margin-top: 1.35135%;
+    }
+
+    &.is-visible {
+      display: block;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $off-black;
+      z-index: 9997; // above everything else, below modals
+
+      .menu {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        margin-top: 4rem;
+
+        @include media($tall-mobile) {
+          margin-top: 5rem;
+        }
+      }
+
+      .hamburger {
+        color: #fff;
+      }
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+
+    @include media($tablet) {
+      position: static;
+      @include span-columns(2);
+    }
+
+    img {
+      width: 80px;
+      height: 70px;
+    }
+  }
+
+  .hamburger {
+    float: right;
+    color: $off-black;
+    font-size: 32px;
+    text-decoration: none;
+    margin: 0.5rem;
+    @include icomoon-icon;
+
+    @include media($tablet) {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: none;
+
+    @include media($tablet) {
+      display: block;
+    }
+  }
+
+  .primary-nav {
+    li {
+      line-height: 1.4;
+      font-size: 1rem;
+      text-align: center;
+      padding: 1rem 0;
+
+      // we can increase padding a bit if we're on a taller screen
+      @include media($tall-mobile) {
+        padding: 0.75rem 0;
+      }
+
+      @include media($tablet) {
+        float: left;
+        display: block;
+        text-align: left;
+        margin: 0 5.59492% 0 0;
+        padding: 0.5rem 0;
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        strong {
+          text-decoration: underline;
+        }
+      }
+
+      @include media($tablet) {
+        color: $off-black;
+      }
+    }
+
+    strong {
+      display: block;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: $font-small;
+    }
+  }
+
+  .secondary-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+
+    @include media($tablet) {
+      position: static;
+      width: auto;
+      padding: 0;
+      float: right;
+    }
+
+    ul {
+      display: block;
+    }
+
+    li {
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+
+      @include media($tablet) {
+        float: left;
+        color: $off-black;
+        text-align: left;
+        padding: 0.75rem 1rem 0.75rem 0;
+      }
+
+      @include media($desktop) {
+        padding: 0.75rem 1.5rem 0.75rem 0;
+      }
+    }
+
+    .secondary-nav-item:first-of-type {
+      @include media($tablet) {
+        padding-left: 1rem;
+        border-left: 3px solid $off-black;
+        border-radius: 0;
+      }
+    }
+
+    input[type="search"] {
+      margin-bottom: 0;
+      @include transition(width 0.5s);
+
+      @include media($tablet) {
+        width: 110px;
+        border: 1px solid $off-black;
+        background-color: transparent;
+      }
+
+      @include media($desktop) {
+        width: 200px;
+      }
+    }
+
+    a {
+      display: inline;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border-radius: $sm-border-radius;
+      padding: 0.5rem 2rem;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include media($tablet) {
+        display: block;
+        background: none;
+        color: $off-black;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0.15rem;
+        padding: 0;
+      }
+    }
+  }
+
+  // Clear floats so messages drop in below navigation.
+  .messages {
+    clear: both;
+  }
+}
+
+
+// Footer
+.footer--wrapper {
+  width: 100%;
+  background: $off-black;
+
+  .searchfield {
+    padding: 0;
+
+    input[type="search"] {
+      color: #fff;
+      border: 0;
+      margin: 0;
+      padding: 0.75rem 0 0.7rem 42px;
+      border-radius: 0;
+      background-color: $med-gray;
+      @include retina-image("assets/images/search_light", 18px 18px)
+    }
+
+    @include media($tablet) {
+      display: none;
+    }
+  }
+
+  .main {
+    @include outer-container-margin;
+    margin: 0 auto;
+
+    h4 {
+      position: relative;
+      color: #fff;
+      margin-bottom: 0;
+      padding: 0 0.25rem;
+      margin: 0;
+      cursor: pointer;
+
+      &:after {
+        @include icomoon-icon;
+        content: "\e609";
+        color: $med-gray;
+        font-size: 32px;
+        position: absolute;
+        right: 0;
+        top: -0.2rem;
+        @include transform(rotate(0));
+        @include transition-property(transform);
+        @include transition-duration(0.25s);
+      }
+
+      @include media($tablet) {
+        cursor: auto;
+        margin: 1rem 0 0.5rem;
+        &:after {
+          content: '';
+        }
+      }
+    }
+
+    ul {
+      height: auto;
+      list-style-type: none;
+      padding: 0.25rem;
+      @include transition(height 0.25s, padding 0.5s);
+    }
+
+    li {
+      line-height: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    a {
+      display: block;
+      color: $light-gray;
+      font-family: $font-proxima-nova;
+      font-size: $font-small;
+      text-decoration: none;
+      padding: 0.25rem 0;
+
+      @include media($tablet) {
+        padding: 0;
+      }
+
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .logo {
+    display: none;
+
+    @include media($tablet) {
+      display: block;
+      padding: 1.25rem 0 0;
+      @include span-columns(2);
+    }
+
+    img {
+      width: 80px;
+      height: 70px;
+    }
+  }
+
+  .col {
+    padding: 0.5rem 0;
+    @include media($tablet) {
+      @include span-columns(3);
+      margin-bottom: 2rem;
+    }
+
+    &.is-collapsed {
+      h4:after {
+        @include transform(rotate(-90deg));
+      }
+
+      ul {
+        overflow: hidden;
+        padding: 0 0.25rem;
+        height: 0;
+      }
+
+      @include media($tablet) {
+        h4:after {
+          content: '';
+        }
+
+        ul {
+          height: auto;
+          padding: 0.25rem;
+          @include transition(none);
+        }
+      }
+    }
+  }
+
+  .help, .knowus, .about {
+    border-top: 1px solid $dark-gray;
+
+    @include media($tablet) {
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+
+  .about {
+    border-bottom: 1px solid $dark-gray;
+
+    @include media($tablet) {
+      border-bottom: 0;
+      @include omega;
+    }
+  }
+
+  .social {
+    text-align: center;
+
+    &.mobile {
+      padding-top: 1rem;
+
+      @include media($tablet) {
+        display: none;
+      }
+    }
+
+    &.tablet {
+      display: none;
+
+      @include media($tablet) {
+        display: block;
+      }
+    }
+
+    @include media($tablet) {
+      float: left;
+      border-top: 0;
+      margin-top: 1.65rem;
+      text-align: left;
+      @include span-columns(5);
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 16px;
+    }
+
+    .social-link {
+      @include icomoon-icon;
+      font-size: 24px;
+      color: $med-gray;
+      text-decoration: none;
+
+
+      &:hover {
+        color: $light-gray;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .subfooter {
+    display: block;
+    clear: both;
+    font-size: $font-small;
+    padding: 0.5rem 0 1rem;
+    @include row;
+
+    a {
+      display: inline;
+      color: $med-gray;
+    }
+
+    .tagline {
+      display: none;
+
+      @include media($tablet) {
+        display: block;
+        float: left;
+        text-align: left;
+      }
+    }
+
+    .utility {
+      text-align: center;
+      list-style-type: none;
+
+      li {
+        display: inline;
+      }
+
+      a {
+        margin: 0 0.5rem;
+        @include media($tablet) {
+          margin: 0 0 0 1rem;
+        }
+      }
+
+      @include media($tablet) {
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+// Wrapper for main content. This lets flexbox stretch the footer to the bottom
+// of the viewport on supported browsers.
+//
+// Styleguide X.X
+.wrapper {
+  @include outer-container-margin;
+  flex: 1;
+}
+
+body {
+  // flexbox stuff to keep footer at bottom
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+// Basic wrapper for text content. Centers on grid and adds proper margin
+// for floating header.
+//
+// Styleguide X.X
+.page {
+  @include media($tablet) {
+    @include span-columns(12);
+    @include shift(2);
+  }
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}

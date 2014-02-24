@@ -1,0 +1,36 @@
+; BASIC SETTINGS
+name 				= SpaceCats
+description = Simple theme for cats that travel in the cosmos.
+core 				= 7.x
+screenshot 	= screenshot.png
+
+
+; FEATURES
+features[] = logo
+features[] = favicon
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = main_menu
+features[] = secondary_menu
+
+
+; REGIONS
+regions[page_top]    = Page Top
+regions[header]      = Header
+regions[main_nav]    = Main Navigation
+regions[sub_nav]     = Sub Navigation
+;regions[hero_banner] = Hero Banner
+regions[content]     = Primary Content
+regions[secondary]   = Secondary Content
+regions[footer]      = Footer
+regions[page_bottom] = Page Bottom
+
+
+; CSS
+stylesheets[all][] = bower_components/pattern-library/neue.css
+stylesheets[all][] = assets/css/global.css
+
+
+; JS

@@ -1,0 +1,24 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// WIDGETS STYLES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.widget { background-color: $med-gray; border-radius: $sm-border-radius; margin-bottom: 1em;
+	.title { background-color: rgba($light-gray, 0.5); font-size: $font-medium; line-height: 1.2; margin: 0; padding: 0.5em; }
+	.content { font-size: 1rem; margin-bottom: 1em; padding: 0.5em; 
+		p { color: $off-black; margin: 0; }
+		
+		p + p { margin-top: 0.5em; }
+		.btn { margin-top: 0.5em; }
+	}
+}
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// MEDIA QUERIES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@media only screen and (min-width: $medium) {
+	
+}

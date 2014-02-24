@@ -1,0 +1,36 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// MAIN NAV STYLES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.main-nav { background-color: $med-gray;
+
+	.menu {
+		> li { border-bottom: 1px solid $off-black;
+			> a { display: block; font-size: $font-regular; font-weight: 700; padding: 0.5em 1.36986%; text-decoration: none; text-transform: uppercase; 
+				&:hover { color: $yellow; }
+			}
+		}
+	}
+
+}
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// MEDIA QUERIES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@media only screen and (min-width: $medium) {
+
+	.main-nav {
+	
+		.menu { display: table; margin: 0 auto;
+			> li { border: 0 none; float: left; 
+				> a { padding: 0.5em 1em; }
+			}
+		}
+
+	}
+	
+}

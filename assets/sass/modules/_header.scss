@@ -1,0 +1,35 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// HEADER STYLES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+header[role="banner"] { background-color: $dark-gray; border-top: 5px solid $blue;
+	h1 { margin: 0;
+		.site-title { color: $yellow; font-size: $font-large; font-family: 'Coda Caption', sans-serif; text-transform: uppercase; 
+			> a { color: $yellow; text-decoration: none; 
+				&:hover { text-shadow: 0 3px 3px rgba(black, 0.9); }
+			}
+		}
+
+		.site-tagline { @include visually_hidden(); color: $med-gray; }
+	}
+
+
+}
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// MEDIA QUERIES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@media only screen and (min-width: $medium) {
+
+	header[role="banner"] {
+		h1 { padding: 1rem;
+			.site-tagline { @include visually_restored(); }
+		}
+	}
+		
+}

@@ -1,0 +1,49 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// POST STYLES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.post { overflow: hidden;
+	h1 { border-bottom: 3px solid rgba($med-gray, 0.2); font-size: $font-large; line-height: 1.2;
+		> a { text-decoration: none; }
+	}
+	
+	// Teaser
+	&.-teaser {
+		.content {
+			a { display: block; margin-bottom: 1.5rem; }
+		}
+	}
+	
+}
+
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// MEDIA QUERIES
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@media only screen and (min-width: $medium) {
+
+	.post {
+		
+		// Teaser
+		&.-teaser {
+			.content {
+				a { @include span-columns(2 of 6); }
+
+				p { @include span-columns(4 of 6); margin-top: 0; }
+			}
+		}
+	
+		// Full
+		&.-full {
+			.content {
+				> img { width: 100%; }
+			}
+		}
+	}
+	
+}
